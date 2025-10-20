@@ -42,7 +42,7 @@
             groupBox1.Controls.Add(lsbEmpleados);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(232, 426);
+            groupBox1.Size = new Size(263, 426);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Listado de empleados";
@@ -53,12 +53,13 @@
             lsbEmpleados.ItemHeight = 15;
             lsbEmpleados.Location = new Point(6, 22);
             lsbEmpleados.Name = "lsbEmpleados";
-            lsbEmpleados.Size = new Size(220, 394);
+            lsbEmpleados.Size = new Size(251, 394);
             lsbEmpleados.TabIndex = 0;
+            lsbEmpleados.SelectedIndexChanged += lsbEmpleados_SelectedIndexChanged;
             // 
             // btnVerListado
             // 
-            btnVerListado.Location = new Point(270, 34);
+            btnVerListado.Location = new Point(281, 33);
             btnVerListado.Name = "btnVerListado";
             btnVerListado.Size = new Size(75, 51);
             btnVerListado.TabIndex = 1;
@@ -68,7 +69,7 @@
             // 
             // btnImportarEmpleados
             // 
-            btnImportarEmpleados.Location = new Point(270, 132);
+            btnImportarEmpleados.Location = new Point(281, 131);
             btnImportarEmpleados.Name = "btnImportarEmpleados";
             btnImportarEmpleados.Size = new Size(75, 60);
             btnImportarEmpleados.TabIndex = 2;
@@ -78,7 +79,7 @@
             // 
             // btnExportarEmpleados
             // 
-            btnExportarEmpleados.Location = new Point(270, 253);
+            btnExportarEmpleados.Location = new Point(281, 252);
             btnExportarEmpleados.Name = "btnExportarEmpleados";
             btnExportarEmpleados.Size = new Size(75, 55);
             btnExportarEmpleados.TabIndex = 3;
@@ -88,7 +89,7 @@
             // 
             // btnGenerarRecibos
             // 
-            btnGenerarRecibos.Location = new Point(270, 368);
+            btnGenerarRecibos.Location = new Point(281, 367);
             btnGenerarRecibos.Name = "btnGenerarRecibos";
             btnGenerarRecibos.Size = new Size(75, 60);
             btnGenerarRecibos.TabIndex = 4;
@@ -100,7 +101,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(359, 450);
+            ClientSize = new Size(366, 450);
             Controls.Add(btnGenerarRecibos);
             Controls.Add(btnExportarEmpleados);
             Controls.Add(btnImportarEmpleados);

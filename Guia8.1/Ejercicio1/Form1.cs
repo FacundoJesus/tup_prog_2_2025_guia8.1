@@ -146,7 +146,7 @@ namespace Ejercicio1
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Title = "GENERAR RECIBOS";
             sfd.Filter = "(txt)|*.txt";
-            if(sfd.ShowDialog() == DialogResult.OK)
+            if (sfd.ShowDialog() == DialogResult.OK)
             {
                 FileStream fs = null;
                 StreamWriter sw = null;
@@ -155,9 +155,9 @@ namespace Ejercicio1
                 {
                     fs = new FileStream(path, FileMode.CreateNew, FileAccess.Write);
                     sw = new StreamWriter(fs);
-                    foreach(Empleado emp in empleados)
+                    foreach (Empleado emp in empleados)
                     {
-                        foreach(string linea in emp.GenerarRecibo())
+                        foreach (string linea in emp.GenerarRecibo())
                         {
                             sw.WriteLine(linea);
                         }
@@ -174,6 +174,19 @@ namespace Ejercicio1
                     if (fs != null) fs.Close();
                 }
 
+            }
+        }
+
+        private void lsbEmpleados_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Empleado empleado = lsbEmpleados.SelectedItem as Empleado;
+            if (empleado != null) {
+                Form2 formVerRecibo = new Form2();
+                
+                formVerRecibo.lsbRecibo.Items.AddRange(empleado.GenerarRecibo());
+
+                formVerRecibo.ShowDialog();
+                formVerRecibo.Dispose();
             }
         }
     }
